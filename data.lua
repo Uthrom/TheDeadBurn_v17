@@ -1,4 +1,5 @@
 require("prototypes.item")
+
 function AddLootToEntity(entityType, entityName, itemName, probability, countMin, countMax)
 	if data.raw[entityType] ~= nil then
 		if data.raw[entityType][entityName] ~= nil then
@@ -10,19 +11,20 @@ function AddLootToEntity(entityType, entityName, itemName, probability, countMin
 	end
 end
 
-AddLootToEntity("unit","small-spitter","monster-body",1,1,1)
-AddLootToEntity("unit","small-biter","monster-body",1,1,1)
+for _, unit in pairs(data.raw['unit']) do
+	if unit.corpse then
+		AddLootToEntity("unit",unit.name,unit.corpse,1,1,1)
+	end
+end
 
-AddLootToEntity("unit","medium-spitter","monster-body",1,2,2)
-AddLootToEntity("unit","medium-biter","monster-body",1,2,2)
+for _, unit in pairs(data.raw['unit-spawner']) do
+	if unit.corpse then
+		AddLootToEntity("unit-spawner",unit.name,unit.corpse,1,1,1)
+	end
+end
 
-AddLootToEntity("unit","big-spitter","monster-body",1,3,3)
-AddLootToEntity("unit","big-biter","monster-body",1,3,3)
-
-AddLootToEntity("unit","behemoth-spitter","monster-body",1,4,4)
-AddLootToEntity("unit","behemoth-biter","monster-body",1,4,4)
-
-
-AddLootToEntity("turret","little-worm-turret","monster-body",1,2,2)
-AddLootToEntity("turret","medium-worm-turret","monster-body",1,4,4)
-AddLootToEntity("turret","big-worm-turret","monster-body",1,6,6)
+for _, unit in pairs(data.raw['turret']) do
+	if unit.corpse then
+		AddLootToEntity("turret",unit.name,unit.corpse,1,1,1)
+	end
+end
