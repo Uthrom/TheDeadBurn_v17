@@ -11,19 +11,19 @@ for _, corpse in pairs(data.raw['corpse']) do
         monsterBody.pictures = {{ filename = corpse.icon, mipmap_count = 1, scale = 1, size = corpse.icon_size}}
 
         if starts_with(corpse.name, "small") then
-	    monsterBody.name = "small-biter-body"
+	    monsterBody.name = "small-biter-corpse-burnt"
 	    monsterBody.fuel_value = "4MJ"
 	end
         if starts_with(corpse.name, "medium") then 
-	    monsterBody.name = "medium-biter-body"
+	    monsterBody.name = "medium-biter-corpse-burnt"
 	    monsterBody.fuel_value = "8MJ" 
 	end
         if starts_with(corpse.name, "big") then 
-	    monsterBody.name = "big-biter-body"
+	    monsterBody.name = "big-biter-corpse-burnt"
 	    monsterBody.fuel_value = "16MJ" 
 	end
         if starts_with(corpse.name, "behemoth") then 
-	    monsterBody.name = "behemoth-biter-body"
+	    monsterBody.name = "behemoth-biter-corpse-burnt"
 	    monsterBody.fuel_value = "32MJ" 
 	end
         
