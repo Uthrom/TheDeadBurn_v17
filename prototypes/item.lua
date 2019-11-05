@@ -5,7 +5,6 @@ end
 
 for _, corpse in pairs(data.raw['corpse']) do
     if corpse.subgroup == 'corpses' then
-
         local monsterBody = table.deepcopy(data.raw['item']['coal'])
         monsterBody.name = corpse.name
         monsterBody.icon = corpse.icon
