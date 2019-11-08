@@ -5,13 +5,11 @@ end
 for _, corpse in pairs(data.raw['corpse']) do
     if corpse.subgroup == 'corpses' then
         local monsterBody = table.deepcopy(data.raw['item']['coal'])
-          monsterBody.name = "monster-body"
-	  monsterBody.icon = "__base__/graphics/icons/medium-biter-corpse.png"
-	  monsterBody.icon_size = 32
---        monsterBody.icon = corpse.icon
---        monsterBody.icon_size = corpse.icon_size
---        monsterBody.icon_mipmaps = 1
---        monsterBody.pictures = {{ filename = corpse.icon, mipmap_count = 1, scale = 1, size = corpse.icon_size}}
+        monsterBody.name = "monster-body"
+        monsterBody.icon = "__base__/graphics/icons/medium-biter-corpse.png"
+        monsterBody.icon_size = 32
+        monsterBody.icon_mipmaps = 1
+        monsterBody.pictures = {{ filename = monsterBody.icon, mipmap_count = 1, scale = 1, size = corpse.icon_size}}
 
         if starts_with(corpse.name, "small") then
 	    monsterBody.name = "monster-body-small"
