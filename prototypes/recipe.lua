@@ -15,6 +15,6 @@ local function add_smelter_recipe( ingredient, ing_qty, res, res_qty, recipe_ene
 end
 
 add_smelter_recipe("monster-body-small", 1, "coal", 1,  1)
-add_smelter_recipe("monster-body-medium", 1, "coal", 2,  2)
-add_smelter_recipe("monster-body-big", 1, "coal", 4,  4)
-add_smelter_recipe("monster-body-behemoth", 1, "coal", 8,  8)
+add_smelter_recipe("monster-body-medium", 1, "coal", 16,  8)
+add_smelter_recipe("monster-body-big", 1, "coal", 32,  16)
+add_smelter_recipe("monster-body-behemoth", 1, "coal", 64, 32)
