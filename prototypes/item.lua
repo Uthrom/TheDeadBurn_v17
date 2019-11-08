@@ -14,20 +14,19 @@ for _, corpse in pairs(data.raw['corpse']) do
         if starts_with(corpse.name, "small") then
 	    monsterBody.name = "monster-body-small"
 	    monsterBody.fuel_value = "4MJ"
-	end
-        if starts_with(corpse.name, "medium") then 
+        elseif starts_with(corpse.name, "medium") then 
 	    monsterBody.name = "monster-body-medium"
 	    monsterBody.fuel_value = "8MJ" 
-	end
-        if starts_with(corpse.name, "big") then 
+        elseif starts_with(corpse.name, "big") then 
 	    monsterBody.name = "monster-body-big"
 	    monsterBody.fuel_value = "16MJ" 
-	end
-        if starts_with(corpse.name, "behemoth") then 
+        elseif starts_with(corpse.name, "behemoth") then 
 	    monsterBody.name = "monster-body-behemoth"
 	    monsterBody.fuel_value = "32MJ" 
-	end
-        
+        else
+            monsterBody.name = "monster-body-small"
+            monsterBody.fuel_value = "4MJ"
+        end
         data:extend({monsterBody})
     end
 end
