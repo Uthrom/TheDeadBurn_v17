@@ -3,7 +3,7 @@
     "version": "0.1.4",
     "title": "The Dead Burn v17",
     "author": "Uthrom",
-    "contact": "Use the mod page website thing",
+    "contact": "https://mods.factorio.com/mod/TheDeadBurn_v17/discussion",
     "homepage": "https://github.com/Uthrom/TheDeadBurn_v17",
     "factorio_version": "0.17",
     "dependencies": ["base >= 0.17"],
