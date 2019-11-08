@@ -35,18 +35,7 @@ end
 
 for _, unit in pairs(data.raw['unit-spawner']) do
   if unit.corpse then
-    if starts_with(unit.corpse, "small") then
-      AddLootToEntity("unit-spawner",unit.name,"monster-body-small",1,1,1)
-    end
-    if starts_with(unit.corpse, "medium") then
-      AddLootToEntity("unit-spawner",unit.name,"monster-body-medium",1,1,1)
-    end
-    if starts_with(unit.corpse, "big") then
-      AddLootToEntity("unit-spawner",unit.name,"monster-body-big",1,1,1)
-    end
-    if starts_with(unit.corpse, "behemoth") then
-      AddLootToEntity("unit-spawner",unit.name,"monster-body-behemoth",1,1,1)
-    end
+    AddLootToEntity("unit-spawner",unit.name,"monster-body-behemoth",1,1,1)
   end
 end
 
