@@ -1,4 +1,4 @@
-require(constants)
+require("constants")
 
 local function add_smelter_recipe(ingredient, ing_qty, res, res_qty, recipe_energy)
     local recipe = {
