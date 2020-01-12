@@ -16,15 +16,17 @@ for _, corpse in pairs(data.raw["corpse"]) do
         elseif starts_with(corpse.name, "medium") then
             monsterBody.name = "monster-body-medium"
             tint = {r = 255, g = 0, b = 0}
-            monsterBody.fuel_value = "64MJ"
+            monsterBody.fuel_value = "32MJ"
         elseif starts_with(corpse.name, "big") then
             monsterBody.name = "monster-body-big"
             tint = {r = 0, g = 0, b = 255}
-            monsterBody.fuel_value = "128MJ"
+            monsterBody.fuel_value = "64MJ"
         elseif starts_with(corpse.name, "behemoth") then
             monsterBody.name = "monster-body-behemoth"
             tint = {r = 0, g = 255, b = 0}
-            monsterBody.fuel_value = "256MJ"
+            monsterBody.fuel_value = "128MJ"
+	    monsterBody.fuel_acceleration_multiplier = 1.5
+	    monsterBody.fuel_top_speed_multiplier = 1.5
         else
             monsterBody.name = "monster-body-small"
             monsterBody.fuel_value = "4MJ"
