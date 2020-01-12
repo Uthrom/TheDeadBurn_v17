@@ -1,4 +1,15 @@
 --------------------------------------------------------------------------------
+Version: 0.1.5
+Date: 2020-01-12
+  Features:
+    - Added recipe to turn monster bodies into heavy oil, for kickstarting coal liquefaction
+  Changes:
+    - Changed fuel values for monster bodies to something more reasonable
+    - Added thumbnail
+  Bug fixes:
+  Info:
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 Version: 0.1.4
 Date: 2019-10-18
   Features:
