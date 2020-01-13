@@ -26,22 +26,18 @@ local body_oil_recipe = {
     category = "oil-processing",
     enabled = true,
     energy_required = 60,
-    ingredients =
-    {
-        {type="fluid", name="steam", amount=500},
-	{type="item", name="monster-body-behemoth", amount=100}
+    ingredients = {
+        {type = "fluid", name = "steam", amount = 500},
+        {type = "item", name = "monster-body-behemoth", amount = 100}
     },
-    results=
-    {
-	{type="fluid", name="heavy-oil", amount=50},
+    results = {
+        {type = "fluid", name = "heavy-oil", amount = 50}
     },
     icon = Constants.AssetModName .. "/graphics/icons/recipe/biter-liquefaction.png",
     icon_size = 32,
     subgroup = "fluid-recipes",
     order = "a[oil-processing]-d[biter-liquefaction]",
     allow_decomposition = false
-
 }
 
 data:extend({body_oil_recipe})
-

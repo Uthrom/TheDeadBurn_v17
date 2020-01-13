@@ -25,8 +25,8 @@ for _, corpse in pairs(data.raw["corpse"]) do
             monsterBody.name = "monster-body-behemoth"
             tint = {r = 0, g = 255, b = 0}
             monsterBody.fuel_value = "128MJ"
-	    monsterBody.fuel_acceleration_multiplier = 1.5
-	    monsterBody.fuel_top_speed_multiplier = 1.5
+            monsterBody.fuel_acceleration_multiplier = 1.5
+            monsterBody.fuel_top_speed_multiplier = 1.5
         else
             monsterBody.name = "monster-body-small"
             monsterBody.fuel_value = "4MJ"
@@ -35,6 +35,9 @@ for _, corpse in pairs(data.raw["corpse"]) do
         monsterBody.icon_mipmaps = 1
         monsterBody.icons = {{icon = monsterBody.icon, icon_size = 32, tint = tint}}
         monsterBody.pictures = {{filename = monsterBody.icon, tint = tint, mipmap_count = 1, scale = 1, size = corpse.icon_size}}
+
+        monsterBody.icon = nil
+        monsterBody.dark_background_icon = nil
 
         data:extend({monsterBody})
     end
