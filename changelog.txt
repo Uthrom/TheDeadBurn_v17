@@ -1,10 +1,10 @@
 --------------------------------------------------------------------------------
-Version: 0.1.7
+Version: 0.1.8
 Date: 2020-01-14
   Features:
   Changes:
+    - Biter bodies recipes updated; icons, names and descriptions
   Bug fixes:
-    - Fixed recipe name appearing correctly
   Info:
 --------------------------------------------------------------------------------
 Version: 0.1.6
