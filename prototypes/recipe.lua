@@ -33,6 +33,7 @@ local body_oil_recipe = {
     results = {
         {type = "fluid", name = "heavy-oil", amount = 50}
     },
+    main_product = "",
     icon = Constants.AssetModName .. "/graphics/icons/recipe/biter-liquefaction.png",
     icon_size = 32,
     subgroup = "fluid-recipes",

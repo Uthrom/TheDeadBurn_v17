@@ -55,3 +55,5 @@ for _, unit in pairs(data.raw["turret"]) do
         end
     end
 end
+
+log(serpent.block(data.raw))
