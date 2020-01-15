@@ -1,4 +1,20 @@
 --------------------------------------------------------------------------------
+Version: 0.1.8
+Date: 2020-01-14
+  Features:
+  Changes:
+    - Biter bodies recipes updated; icons, names and descriptions
+  Bug fixes:
+  Info:
+--------------------------------------------------------------------------------
+Version: 0.1.6
+Date: 2020-01-12
+  Features:
+  Changes:
+  Bug fixes:
+    - Icon fixes so they display correctly in ALT mode
+  Info:
+--------------------------------------------------------------------------------
 Version: 0.1.5
 Date: 2020-01-12
   Features:
@@ -8,7 +24,6 @@ Date: 2020-01-12
     - Added thumbnail
   Bug fixes:
   Info:
---------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 Version: 0.1.4
 Date: 2019-10-18
@@ -50,7 +65,6 @@ Date: 2019-11-04
   Changes:
   Bug fixes:
   Info:
-    - Initial Release of Mod, fixed for 0.17 from 
+    - Initial Release of Mod, fixed for 0.17 from
       https://mods.factorio.com/mod/TheDeadBurn
 --------------------------------------------------------------------------------
-
