@@ -8,7 +8,7 @@ for _, corpse in pairs(data.raw["corpse"]) do
         local monsterBody = table.deepcopy(data.raw["item"]["coal"])
         monsterBody.name = "monster-body"
         monsterBody.icon = "__base__/graphics/icons/medium-biter-corpse.png"
-        monsterBody.icon_size = 32
+        monsterBody.icon_size = 64
 
         if starts_with(corpse.name, "small") then
             monsterBody.name = "monster-body-small"
@@ -32,9 +32,9 @@ for _, corpse in pairs(data.raw["corpse"]) do
             monsterBody.fuel_value = "4MJ"
         end
 
-        monsterBody.icon_mipmaps = 1
-        monsterBody.icons = {{icon = monsterBody.icon, icon_size = 32, tint = tint}}
-        monsterBody.pictures = {{filename = monsterBody.icon, tint = tint, mipmap_count = 1, scale = 1, size = corpse.icon_size}}
+        monsterBody.icon_mipmaps = 4
+        monsterBody.icons = {{icon = monsterBody.icon, icon_size = 64, tint = tint}}
+        monsterBody.pictures = {{filename = monsterBody.icon, tint = tint, mipmap_count = 4, scale = 1, size = corpse.icon_size}}
 
         monsterBody.icon = nil
         monsterBody.dark_background_icon = nil
