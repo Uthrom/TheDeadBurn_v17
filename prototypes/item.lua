@@ -34,7 +34,7 @@ for _, corpse in pairs(data.raw["corpse"]) do
 
         monsterBody.icon_mipmaps = 4
         monsterBody.icons = {{icon = monsterBody.icon, icon_size = 64, tint = tint}}
-        monsterBody.pictures = {{filename = monsterBody.icon, tint = tint, mipmap_count = 4, scale = 0.25, size = corpse.icon_size}}
+        monsterBody.pictures = {{filename = monsterBody.icon, tint = tint, mipmap_count = 4, scale = 0.25, size = monsterBody.icon_size}}
 
         monsterBody.icon = nil
         monsterBody.dark_background_icon = nil
