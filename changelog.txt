@@ -1,36 +1,60 @@
---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+Version: 0.18.1
+Date: 2020-01-22
+  Features:
+  Changes:
+  Bugfixes:
+    - Fixed icon size
+  Info:
+----------------------------------------------------------------------------------------------------
+Version: 0.18.0
+Date: 2020-01-22
+  Features:
+  Changes:
+    - Updated for 0.18
+  Bugfixes:
+  Info:
+----------------------------------------------------------------------------------------------------
+Version: 0.2.2
+Date: 2020-01-22
+  Features:
+  Changes:
+  Bugfixes:
+    - Fixed item icon scaling on the ground + on belts
+  Info:
+---------------------------------------------------------------------------------------------------
 Version: 0.2.1
 Date: 2020-01-22
   Features:
   Changes:
-  Bug fixes:
+  Bugfixes:
     - Icon sizes needed tweaking
   Info:
---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: 2020-01-22
   Features:
   Changes:
-  Bug fixes:
+  Bugfixes:
   Info:
     - Updated for 0.18
----------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
 Version: 0.1.8
 Date: 2020-01-14
   Features:
   Changes:
     - Biter bodies recipes updated; icons, names and descriptions
-  Bug fixes:
+  Bugfixes:
   Info:
---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
 Version: 0.1.6
 Date: 2020-01-12
   Features:
   Changes:
-  Bug fixes:
+  Bugfixes:
     - Icon fixes so they display correctly in ALT mode
   Info:
---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
 Version: 0.1.5
 Date: 2020-01-12
   Features:
@@ -38,49 +62,48 @@ Date: 2020-01-12
   Changes:
     - Changed fuel values for monster bodies to something more reasonable
     - Added thumbnail
-  Bug fixes:
+  Bugfixes:
   Info:
---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
 Version: 0.1.4
 Date: 2019-10-18
   Features:
   Changes:
-  Bug fixes:
+  Bugfixes:
     - Accidentally overwrite global coal recipe, fixed.
   Info:
---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
 Version: 0.1.3
 Date: 2019-09-28
   Features:
     - Biter fuel now is size-dependent, and can be fed through a smelter to
       turn into coal. Now you can run your whole factory on biters.
   Changes:
-  Bug fixes:
+  Bugfixes:
   Info:
---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
 Version: 0.1.2
 Date: 2019-09-28
   Features:
   Changes:
-  Bug fixes:
+  Bugfixes:
     - Trouble fixing locale
   Info:
---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
 Version: 0.1.1
 Date: 2019-09-28
   Features:
     - Drops different fuel sizes depending on biter size/spawner
   Changes:
-  Bug fixes:
+  Bugfixes:
     - Fixed typos, etc
   Info:
---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
 Version: 0.1.0
 Date: 2019-11-04
   Features:
   Changes:
-  Bug fixes:
+  Bugfixes:
   Info:
     - Initial Release of Mod, fixed for 0.17 from
       https://mods.factorio.com/mod/TheDeadBurn
---------------------------------------------------------------------------------
