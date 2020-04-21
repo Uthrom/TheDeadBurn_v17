@@ -1,5 +1,16 @@
 Constants = require("constants")
 
+data:extend(
+    {
+        {
+            group = "intermediate-products",
+            name = "biter-liquefaction",
+            order = "c",
+            type = "item-subgroup"
+        }
+    }
+)
+
 local function add_smelter_recipe(ingredient, ing_qty, res, res_qty, recipe_energy, order)
     local recipe = {
         type = "recipe",
@@ -23,30 +34,47 @@ local function add_smelter_recipe(ingredient, ing_qty, res, res_qty, recipe_ener
     data:extend({recipe})
 end
 
+local function add_oil_recipe(ingredient, ing_qty, recipe_energy, order, tint)
+    local body_oil_recipe = {
+        name = ingredient .. "-biter-liquefaction",
+        allow_decomposition = false,
+        category = "crafting-with-fluid",
+        enabled = false,
+        energy_required = recipe_energy,
+        icon_mipmaps = 4,
+        icon_size = 64,
+        icons = {
+            {icon = "__base__/graphics/icons/fluid/barreling/barrel-fill.png", icon_mipmaps = 4, icon_size = 64},
+            {icon = "__base__/graphics/icons/fluid/barreling/barrel-fill-side-mask.png", icon_mipmaps = 4, icon_size = 64, tint = {a = 0.75, b = 0, g = 0, r = 0}},
+            {icon = "__base__/graphics/icons/fluid/barreling/barrel-fill-top-mask.png", icon_mipmaps = 4, icon_size = 64, tint = {a = 0.5, b = 0.5, g = 0.5, r = 0.5}},
+            {icon = "__base__/graphics/icons/fluid/crude-oil.png", icon_mipmaps = 4, icon_size = 64, scale = 0.25, shift = {4, -8}},
+            {icon = "__base__/graphics/icons/medium-biter-corpse.png", tint = tint, icon_mipmaps = 4, icon_size = 64, scale = 0.25, shift = {-4, -8}}
+        },
+        ingredients = {
+            {amount = 50, catalyst_amount = 50, name = "steam", type = "fluid"},
+            {amount = ing_qty, name = "monster-body-" .. ingredient, type = "item"},
+            {amount = 1, catalyst_amount = 1, name = "empty-barrel", type = "item"}
+        },
+        order = "c[fill-crude-oil-barrel]" .. order,
+        results = {
+            {amount = 1, catalyst_amount = 1, name = "crude-oil-barrel", type = "item"}
+        },
+        subgroup = "biter-liquefaction",
+        type = "recipe"
+    }
+
+    data:extend({body_oil_recipe})
+
+    local tech = data.raw.technology["fluid-handling"]
+    table.insert(tech.effects, {recipe = body_oil_recipe.name, type = "unlock-recipe"})
+end
+
 add_smelter_recipe("monster-body-small", 1, "coal", 1, 1, "a")
 add_smelter_recipe("monster-body-medium", 1, "coal", 8, 8, "b")
 add_smelter_recipe("monster-body-big", 1, "coal", 16, 16, "c")
 add_smelter_recipe("monster-body-behemoth", 1, "coal", 32, 32, "d")
 
-local body_oil_recipe = {
-    type = "recipe",
-    name = "biter-liquefaction",
-    category = "oil-processing",
-    enabled = true,
-    energy_required = 60,
-    ingredients = {
-        {type = "fluid", name = "steam", amount = 500},
-        {type = "item", name = "monster-body-behemoth", amount = 100}
-    },
-    results = {
-        {type = "fluid", name = "heavy-oil", amount = 50}
-    },
-    main_product = "",
-    icon = Constants.AssetModName .. "/graphics/icons/recipe/biter-liquefaction.png",
-    icon_size = 32,
-    subgroup = "fluid-recipes",
-    order = "a[oil-processing]-d[biter-liquefaction]",
-    allow_decomposition = false
-}
-
-data:extend({body_oil_recipe})
+add_oil_recipe("small", 125, 10, "a", nil)
+add_oil_recipe("medium", 25, 10, "b", {r = 255, g = 0, b = 0})
+add_oil_recipe("big", 5, 10, "c", {r = 0, g = 0, b = 255})
+add_oil_recipe("behemoth", 1, 10, "d", {r = 0, g = 255, b = 0})

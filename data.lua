@@ -55,3 +55,17 @@ for _, unit in pairs(data.raw["turret"]) do
         end
     end
 end
+
+if settings.startup["early_coal_liqification"].value then
+    local tech = data.raw.technology["coal-liquefaction"]
+    tech.prerequisites = {"advanced-oil-processing"}
+    tech.unit = {
+        count = 200,
+        ingredients = {
+            {"automation-science-pack", 1},
+            {"logistic-science-pack", 1},
+            {"chemical-science-pack", 1}
+        },
+        time = 30
+    }
+end
