@@ -1,10 +1,10 @@
 {
     "name": "TheDeadBurn_v17",
-    "version": "1.1.0",
+    "version": "2.0.0",
     "title": "The Dead Burn v17",
     "author": "Uthrom",
     "contact": "https://mods.factorio.com/mod/TheDeadBurn_v17/discussion",
     "homepage": "https://github.com/Uthrom/TheDeadBurn_v17",
-    "factorio_version": "1.1",
+    "factorio_version": "2.0",
     "description": "You can burn the dead bodies of monsters you kill for fuel."
 }

@@ -17,23 +17,22 @@ local function add_smelter_recipe(ingredient, ing_qty, res, res_qty, recipe_ener
         name = ingredient,
         category = "smelting",
         energy_required = recipe_energy,
-        ingredients = {{ingredient, ing_qty}},
-        products = {{res, res_qty}},
+        ingredients = { { name = ingredient, amount = ing_qty, type = "item" } },
+        results = { { type = "item", name = res, amount = res_qty } },
         order = "biter-bodies-" .. order,
         main_product = "",
-        subgroup = "raw-resource",
-        result = res,
-        result_count = res_qty
+        subgroup = "raw-resource"
     }
+
+    -- Adding icons from the coal item
     local coal_item = data.raw.item["coal"]
-    recipe.icons = {{icon = coal_item.icon, icon_size = coal_item.icon_size}}
+    recipe.icons = { { icon = coal_item.icon, icon_size = coal_item.icon_size } }
     for _, icon_layer in pairs(data.raw.item[ingredient].icons) do
         table.insert(recipe.icons, icon_layer)
     end
 
-    data:extend({recipe})
+    data:extend({ recipe })
 end
-
 local function add_oil_recipe(ingredient, ing_qty, recipe_energy, order, tint)
     local body_oil_recipe = {
         name = ingredient .. "-biter-liquefaction",
@@ -53,7 +52,7 @@ local function add_oil_recipe(ingredient, ing_qty, recipe_energy, order, tint)
         ingredients = {
             {amount = 50, catalyst_amount = 50, name = "steam", type = "fluid"},
             {amount = ing_qty, name = "monster-body-" .. ingredient, type = "item"},
-            {amount = 1, catalyst_amount = 1, name = "empty-barrel", type = "item"}
+            {amount = 1, catalyst_amount = 1, name = "barrel", type = "item"}
         },
         order = "c[fill-crude-oil-barrel]" .. order,
         results = {
